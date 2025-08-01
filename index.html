@@ -6,12 +6,15 @@
     <title>Department of Law</title>
     <!-- Load Tailwind CSS from CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Use Inter font for a clean, professional look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Use Poppins for headings and Lato for body for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f4f8; /* A light blue-gray similar to the reference */
+            font-family: 'Lato', sans-serif;
+            background-color: #f0f4f8; /* A light blue-gray */
+        }
+        h1, h2, h3, .poppins {
+            font-family: 'Poppins', sans-serif;
         }
         /* Custom color palette matching the reference site */
         .primary-blue { background-color: #0d2c4e; color: #fff; }
@@ -50,19 +53,19 @@
                     </svg>
                 </a>
                 <div>
-                    <h1 class="text-2xl font-bold">University Law Department</h1>
+                    <h1 class="text-2xl font-bold poppins">University Law Department</h1>
                     <h2 class="text-sm text-gray-400">Pursuing Justice, Shaping Minds</h2>
                 </div>
             </div>
             
             <!-- Desktop Navigation -->
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors">Home</a>
-                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors">About</a>
-                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors">Academics</a>
-                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors">Faculty</a>
-                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors">Research</a>
-                <a href="#" class="accent-yellow-bg text-white font-semibold px-6 py-2 rounded-full shadow-lg hover-accent-yellow-bg transition-all duration-300">Contact Us</a>
+                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors poppins">Home</a>
+                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors poppins">About</a>
+                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors poppins">Academics</a>
+                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors poppins">Faculty</a>
+                <a href="#" class="text-white hover-accent-yellow font-medium transition-colors poppins">Research</a>
+                <a href="#" class="accent-yellow-bg text-white font-semibold px-6 py-2 rounded-full shadow-lg hover-accent-yellow-bg transition-all duration-300 poppins">Contact Us</a>
             </nav>
 
             <!-- Mobile Menu Button -->
@@ -78,27 +81,27 @@
 
         <!-- Mobile Navigation Menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner">
-            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Home</a>
-            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">About</a>
-            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Academics</a>
-            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Faculty</a>
-            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Research</a>
-            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100">Contact Us</a>
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 poppins">Home</a>
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 poppins">About</a>
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 poppins">Academics</a>
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 poppins">Faculty</a>
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 poppins">Research</a>
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 poppins">Contact Us</a>
         </div>
     </header>
 
     <div id="main-content" class="container mx-auto px-6 py-12">
         <!-- Hero Section -->
         <section class="relative h-[450px] rounded-3xl overflow-hidden shadow-2xl mb-12">
-            <img src="https://pc-law-aus.vercel.app/media/law.webp" alt="Law Department Hero Image" class="absolute inset-0 w-full h-full object-cover filter brightness-75">
-            <div class="absolute inset-0 flex flex-col items-center justify-center p-8">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white text-center drop-shadow-lg leading-tight">
+            <img src="https://pc-law-aus.vercel.app/media/law.webp" alt="Department of Law" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center p-8">
+                <h1 class="poppins text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white text-center drop-shadow-lg leading-tight">
                     Welcome to the Department of Law
                 </h1>
                 <p class="text-xl md:text-2xl font-light text-gray-200 text-center mt-4">
                     Educating the next generation of legal leaders and scholars.
                 </p>
-                <a href="#" class="mt-8 px-8 py-4 text-lg font-bold accent-yellow-bg rounded-full shadow-xl hover-accent-yellow-bg transition-all duration-300 hover:scale-105">
+                <a href="#" class="mt-8 px-8 py-4 text-lg font-bold accent-yellow-bg rounded-full shadow-xl hover:bg-white hover:text-black transition-all duration-300 hover:scale-105 poppins">
                     Explore Our Programs
                 </a>
             </div>
@@ -108,7 +111,7 @@
         <div class="space-y-12">
             <!-- About Us Section -->
             <section class="bg-white p-8 rounded-3xl shadow-xl">
-                <h2 class="text-3xl font-bold primary-blue mb-6">About Our Department</h2>
+                <h2 class="text-3xl font-bold primary-blue mb-6 poppins">About Our Department</h2>
                 <p class="text-gray-600 leading-relaxed text-lg">
                     The Department of Law is dedicated to fostering a comprehensive understanding of legal systems and their impact on society. Our curriculum combines theoretical knowledge with practical skills, preparing students for successful careers in law, public service, and academia. We pride ourselves on a rich history of legal scholarship and a vibrant, engaging learning environment.
                 </p>
@@ -119,11 +122,11 @@
             
             <!-- About Our HOD Section -->
             <section class="bg-white p-8 rounded-3xl shadow-xl">
-                <h2 class="text-3xl font-bold primary-blue mb-6">About Our HOD</h2>
+                <h2 class="text-3xl font-bold primary-blue mb-6 poppins">About Our HOD</h2>
                 <div class="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-8">
                     <img src="https://placehold.co/200x200/e2e8f0/0d2c4e?text=HOD" alt="Dr. Partha Pratim Paul" class="rounded-full w-40 h-40 object-cover shadow-lg flex-shrink-0">
                     <div class="text-center md:text-left">
-                        <h3 class="text-xl font-bold accent-yellow">Dr. Partha Pratim Paul</h3>
+                        <h3 class="text-xl font-bold accent-yellow poppins">Dr. Partha Pratim Paul</h3>
                         <p class="text-gray-600 text-lg">Head of Department, Assistant Professor</p>
                         <p class="text-gray-500 text-sm mt-2">Specializations: Indian Jurisprudence, Intellectual Property Rights, Comparative Constitutional Law, Law and Social Transformation, and International Trade Laws.</p>
                         <p class="text-gray-500 text-sm mt-1">Contact: partha.pratim.paul@aus.ac.i, 7896026758</p>
@@ -133,117 +136,117 @@
 
             <!-- Faculty Details Section -->
             <section class="bg-white p-8 rounded-3xl shadow-xl">
-                <h2 class="text-3xl font-bold primary-blue mb-6">Faculty Details</h2>
+                <h2 class="text-3xl font-bold primary-blue mb-6 poppins">Faculty Details</h2>
                 <div class="overflow-x-auto scroll-container rounded-lg border border-gray-200">
                     <table class="min-w-full divide-y divide-gray-200">
                         <thead class="bg-gray-50">
                             <tr>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider poppins">
                                     Name
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider poppins">
                                     Designation
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider poppins">
                                     Specializations
                                 </th>
-                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider poppins">
                                     Email
                                 </th>
                             </tr>
                         </thead>
                         <tbody class="bg-white divide-y divide-gray-200">
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Madhumita Dhar Sarkar</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Jurisprudence, Environmental Law, and Criminal Law.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">madhumita.dhar.sarkar@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Rashmi Ranjan Mishra</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Associate Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Criminal Law, Criminology & Penology, Juvenile Justice, Interpretation of Statutes, and Research Methodology.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">rashmi.ranjan.mishra@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Partha Pratim Paul</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Indian Jurisprudence, Intellectual Property Rights, Comparative Constitutional Law, Law and Social Transformation, and International Trade Laws.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">partha.pratim.paul@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Priya Ranjan Kumar</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Constitution & Administrative Law, and Contract & Corporate Law.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">priya.ranjan.kumar@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Amitabh Singh</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Criminal Law, Criminology, Code of Civil Procedure, and Women related law.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">amitabh.singh@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Umesh Kr. Sharma</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Criminal Law.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">umesh.kumar@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ms. Pompita Paul</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Criminal Law, Constitutional Law, and Family Law.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">pompita.paul@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Suranjan Das</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Research Methodology, Sociology of Health, Sociology of Marginalized Community, Sociology of Crime and Deviance.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">suranjan.das@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Mr. Bishwajit Das</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Intellectual Property Laws, Right to Information laws, Administrative law, and Constitutional law.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">bishwajit.das@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ms. Ponkhi Borah</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Criminal Law, Constitutional Law, and Human Rights.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ponkhi.borah@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Nasruddin Khan</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Modern Indian History and Legal History.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">nasruddin.khan@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Ms. Thejani-i Pohena</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">African-American Literature and Post-Colonial Studies.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">thejani-i.pohena@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Mrs. Dristirupa Patgiri</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Human Rights, International Law, Gender Justice & Feminist Approach.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">dristirupa.patgiri@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Mr. Ashish Ransom</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Business Laws and Intellectual Property Rights.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ashish.ransom@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Mrs. Deepshikha Bhattacharjee</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Indian Government and Politics, State Politics in Assam, and Comparative Politics.</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">deepshikha.bhattacharjee@aus.ac.in</td>
                             </tr>
-                            <tr>
+                            <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Dr. Sandeep Kumar Suman</td>
                                 <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Assistant Professor</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">IPR, GI, Procedural Laws, and ADR.</td>
@@ -261,13 +264,13 @@
         <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
             <!-- Department Info -->
             <div class="col-span-1">
-                <h3 class="text-xl font-bold text-white mb-4">Department of Law</h3>
+                <h3 class="text-xl font-bold text-white mb-4 poppins">Department of Law</h3>
                 <p class="text-sm">Providing a world-class legal education and contributing to society through scholarship and service.</p>
             </div>
             
             <!-- Useful Links -->
             <div class="col-span-1">
-                <h3 class="text-xl font-bold text-white mb-4">Useful Links</h3>
+                <h3 class="text-xl font-bold text-white mb-4 poppins">Useful Links</h3>
                 <ul class="space-y-2 text-sm">
                     <li><a href="#" class="hover:text-white transition-colors">Academic Calendar</a></li>
                     <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
@@ -278,7 +281,7 @@
             
             <!-- Contact Info -->
             <div class="col-span-1">
-                <h3 class="text-xl font-bold text-white mb-4">Contact</h3>
+                <h3 class="text-xl font-bold text-white mb-4 poppins">Contact</h3>
                 <address class="not-italic text-sm space-y-1">
                     <p>University of Law, 123 Legal Lane,</p>
                     <p>Justice City, State 12345</p>
@@ -289,7 +292,7 @@
             
             <!-- Social Media -->
             <div class="col-span-1">
-                <h3 class="text-xl font-bold text-white mb-4">Follow Us</h3>
+                <h3 class="text-xl font-bold text-white mb-4 poppins">Follow Us</h3>
                 <div class="flex space-x-4">
                     <a href="#" class="text-gray-400 hover-accent-yellow transition-colors">
                         <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.453v-9.294H9.689V11.237h3.089V8.756c0-3.076 1.83-4.723 4.582-4.723 1.31 0 2.434.097 2.756.14v3.188l-1.884.001c-1.468 0-1.75.71-1.75 1.745v2.296h3.518l-.457 3.715h-3.06V24h6.115c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
