@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department Notice Board</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Use Poppins for headings and Lato for body for a clean, modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f0f4f8; /* A light blue-gray */
+        }
+        h1, h2, h3, .poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Custom color palette matching the reference site */
+        .primary-blue { background-color: #0d2c4e; color: #fff; }
+        .accent-yellow { color: #ce8800; }
+        .accent-yellow-bg { background-color: #ce8800; color: #fff; }
+        .hover-accent-yellow:hover { color: #ce8800; }
+        .hover-accent-yellow-bg:hover { background-color: #bf7e00; }
+        
+        /* Custom scrollbar styling for the notice board table */
+        .scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .scroll-container::-webkit-scrollbar-track {
+            background: #e2e8f0;
+            border-radius: 10px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb {
+            background: #94a3b8;
+            border-radius: 10px;
+        }
+        .scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #64748b;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="primary-blue shadow-lg text-white">
+        <div class="container mx-auto px-6 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+                <a href="#" class="flex-shrink-0">
+                    <!-- Modern Notice Board icon with SVG -->
+                    <svg class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path d="M12 11V3m0 8l-4 4m4-4l4 4m-4 4v4m-8-8H3m4-4V3m-4 8h4m4-8V3m-4 8V3m-4 8V3m4 8V3m4 8v4m-4-4V3m-4 8h4m4-8V3m-4 8V3m-4-4v4m-4-4H3m4 4h4m4-4h4m-4-4v4m-4-4V3m-4-4V3m-4 8V3m4 8v4m-4-4V3m-4-4H3m4 4h4m4-4h4m-4-4v4m-4-4V3m-4 8v4m-4-4H3m4 4h4m4-4h4m-4-4v4m-4-4V3m-4-4V3m-4-4H3m4 4h4m4-4h4M4 14h16M4 18h16M4 22h16M12 2v20"></path>
+                    </svg>
+                </a>
+                <div>
+                    <h1 class="text-2xl font-bold poppins">Department of Law</h1>
+                    <h2 class="text-sm text-gray-400">Announcements & Notices</h2>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#" class="accent-yellow-bg text-white font-semibold px-6 py-2 rounded-full shadow-lg hover-accent-yellow-bg transition-all duration-300 poppins">Back to Main Site</a>
+            </nav>
+
+            <button id="mobile-menu-button" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white">
+                <svg id="menu-icon" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+                <svg id="close-icon" class="hidden h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-inner">
+            <a href="#" class="block px-6 py-3 text-gray-700 hover:bg-gray-100 poppins">Back to Main Site</a>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-6 py-12">
+        <h2 class="poppins text-4xl font-bold primary-blue text-center mb-10">Department Notice Board</h2>
+
+        <!-- Notices Table -->
+        <div class="overflow-x-auto scroll-container rounded-lg border border-gray-200 shadow-xl">
+            <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider poppins">
+                            Notice Title
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider poppins">
+                            Date Published
+                        </th>
+                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider poppins">
+                            Details
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="bg-white divide-y divide-gray-200">
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Law Review Submissions Open</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">August 1, 2024</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 max-w-lg">
+                            The Department of Law is pleased to announce that submissions for the annual Law Review are now open. We invite all students and faculty to submit their research papers, articles, and case studies. The deadline for submissions is September 30, 2024.
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Guest Lecture by Justice Elena Ramirez</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">July 28, 2024</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 max-w-lg">
+                            Join us for an inspiring guest lecture on "The Future of Digital Rights" by the Honorable Justice Elena Ramirez of the Supreme Court. The event will take place on August 15 at 10:00 AM in the Main Auditorium. All are welcome.
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Moot Court Competition Results</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">July 25, 2024</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 max-w-lg">
+                            Congratulations to the winning team of the Annual Moot Court Competition, "The Defenders of Justice"! Your dedication and hard work have paid off. We also extend our gratitude to all participants for a fantastic competition.
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">New Research Grant Opportunity</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">July 20, 2024</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 max-w-lg">
+                            A new research grant has been made available to support innovative projects in the field of International Law. Interested faculty and Ph.D. students can find more details and the application form on the research portal.
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Library Hours Extended</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">July 18, 2024</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 max-w-lg">
+                            Effective immediately, the Law Department Library will have extended hours during the exam period. The new hours will be from 8:00 AM to 10:00 PM, Monday through Saturday.
+                        </td>
+                    </tr>
+                    <tr class="hover:bg-gray-50 transition-colors">
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Faculty Meeting Rescheduled</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">July 15, 2024</td>
+                        <td class="px-6 py-4 text-sm text-gray-500 max-w-lg">
+                            The monthly faculty meeting originally scheduled for August 5th has been moved to August 8th at 2:00 PM in the Faculty Lounge. Please check your email for the updated agenda.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-12 mt-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <!-- Department Info -->
+            <div class="col-span-1">
+                <h3 class="text-xl font-bold text-white mb-4 poppins">Department of Law</h3>
+                <p class="text-sm">Providing a world-class legal education and contributing to society through scholarship and service.</p>
+            </div>
+            
+            <!-- Useful Links -->
+            <div class="col-span-1">
+                <h3 class="text-xl font-bold text-white mb-4 poppins">Useful Links</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-white transition-colors">Academic Calendar</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Alumni</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Library</a></li>
+                </ul>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="col-span-1">
+                <h3 class="text-xl font-bold text-white mb-4 poppins">Contact</h3>
+                <address class="not-italic text-sm space-y-1">
+                    <p>University of Law, 123 Legal Lane,</p>
+                    <p>Justice City, State 12345</p>
+                    <p>Email: <a href="mailto:info@lawdept.edu" class="hover:text-white transition-colors">info@lawdept.edu</a></p>
+                    <p>Phone: (123) 456-7890</p>
+                </address>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="col-span-1">
+                <h3 class="text-xl font-bold text-white mb-4 poppins">Follow Us</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover-accent-yellow transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.453v-9.294H9.689V11.237h3.089V8.756c0-3.076 1.83-4.723 4.582-4.723 1.31 0 2.434.097 2.756.14v3.188l-1.884.001c-1.468 0-1.75.71-1.75 1.745v2.296h3.518l-.457 3.715h-3.06V24h6.115c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg>
+                    </a>
+                    <a href="#" class="text-gray-400 hover-accent-yellow transition-colors">
+                        <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.799-1.574 2.164-2.722-.951.565-2.005.974-3.127 1.196-.897-.957-2.178-1.555-3.594-1.555-2.71 0-4.912 2.203-4.912 4.912 0 .385.045.758.127 1.114-4.082-.205-7.719-2.164-10.14-5.143-.424.727-.666 1.57-.666 2.476 0 1.708.87 3.218 2.193 4.098-.809-.026-1.567-.247-2.228-.616v.061c0 2.384 1.696 4.373 3.946 4.827-.413.111-.849.17-1.296.17-.317 0-.626-.031-.926-.088.627 1.956 2.448 3.376 4.604 3.417-1.685 1.323-3.805 2.112-6.102 2.112-.398 0-.79-.023-1.176-.069 2.185 1.396 4.793 2.213 7.575 2.213 9.088 0 14.04-7.51 14.04-14.039v-.63c.962-.695 1.794-1.562 2.459-2.549z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm text-gray-500">
+            <p>&copy; 2024 University Law Department. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu toggle logic
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+
+            if (mobileMenuButton && mobileMenu && menuIcon && closeIcon) {
+                mobileMenuButton.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    menuIcon.classList.toggle('hidden');
+                    closeIcon.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
