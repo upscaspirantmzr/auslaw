@@ -80,8 +80,8 @@
     <div class="container mx-auto px-6 py-12">
         <h2 class="poppins text-4xl font-bold primary-blue text-center mb-10">Department Notice Board</h2>
 
-        <!-- Notices Table -->
-        <div class="overflow-x-auto scroll-container rounded-lg border border-gray-200 shadow-xl">
+        <!-- Notices Table for Desktop and Tablet -->
+        <div class="overflow-x-auto scroll-container rounded-lg border border-gray-200 shadow-xl hidden md:block">
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-50">
                     <tr>
@@ -141,6 +141,46 @@
                     </tr>
                 </tbody>
             </table>
+        </div>
+
+        <!-- Notices Card View for Mobile -->
+        <div class="block md:hidden space-y-6">
+            <!-- Notice Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="poppins text-lg font-bold primary-blue">Law Review Submissions Open</h3>
+                <p class="text-sm text-gray-500 mt-1">Published: August 1, 2024</p>
+                <p class="text-gray-600 mt-3 text-sm">The Department of Law is pleased to announce that submissions for the annual Law Review are now open. We invite all students and faculty to submit their research papers, articles, and case studies. The deadline for submissions is September 30, 2024.</p>
+            </div>
+            <!-- Notice Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="poppins text-lg font-bold primary-blue">Guest Lecture by Justice Elena Ramirez</h3>
+                <p class="text-sm text-gray-500 mt-1">Published: July 28, 2024</p>
+                <p class="text-gray-600 mt-3 text-sm">Join us for an inspiring guest lecture on "The Future of Digital Rights" by the Honorable Justice Elena Ramirez of the Supreme Court. The event will take place on August 15 at 10:00 AM in the Main Auditorium. All are welcome.</p>
+            </div>
+            <!-- Notice Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="poppins text-lg font-bold primary-blue">Moot Court Competition Results</h3>
+                <p class="text-sm text-gray-500 mt-1">Published: July 25, 2024</p>
+                <p class="text-gray-600 mt-3 text-sm">Congratulations to the winning team of the Annual Moot Court Competition, "The Defenders of Justice"! Your dedication and hard work have paid off. We also extend our gratitude to all participants for a fantastic competition.</p>
+            </div>
+            <!-- Notice Card 4 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="poppins text-lg font-bold primary-blue">New Research Grant Opportunity</h3>
+                <p class="text-sm text-gray-500 mt-1">Published: July 20, 2024</p>
+                <p class="text-gray-600 mt-3 text-sm">A new research grant has been made available to support innovative projects in the field of International Law. Interested faculty and Ph.D. students can find more details and the application form on the research portal.</p>
+            </div>
+            <!-- Notice Card 5 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="poppins text-lg font-bold primary-blue">Library Hours Extended</h3>
+                <p class="text-sm text-gray-500 mt-1">Published: July 18, 2024</p>
+                <p class="text-gray-600 mt-3 text-sm">Effective immediately, the Law Department Library will have extended hours during the exam period. The new hours will be from 8:00 AM to 10:00 PM, Monday through Saturday.</p>
+            </div>
+            <!-- Notice Card 6 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="poppins text-lg font-bold primary-blue">Faculty Meeting Rescheduled</h3>
+                <p class="text-sm text-gray-500 mt-1">Published: July 15, 2024</p>
+                <p class="text-gray-600 mt-3 text-sm">The monthly faculty meeting originally scheduled for August 5th has been moved to August 8th at 2:00 PM in the Faculty Lounge. Please check your email for the updated agenda.</p>
+            </div>
         </div>
     </div>
 
